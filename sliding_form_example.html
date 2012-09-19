@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script src="sliding_form.js"></script>
+  <style type="text/css">
+    body{font-family: "Helvetica","Ariel", sans-serif}
+	  #form-container {width: 640px; height: 280px; border: 2px solid gray; border-collapse: collapse; position:relative;left: 20px;}
+	  .form-box { width: 600px; height: 200px; position:absolute; top: 0px; left: 0px; padding: 20px;}
+	  #form-bottom{position:absolute; width:640px; bottom:0px;}
+	  #form-next{float:right; margin: 10px;}
+ 	  #form-prev{float:right; margin: 10px;}
+    .form-box label{display:inline-block;width: 160px; font-size: 20px; padding-top:15px;}
+    .form-box input{display:inline-block:width: 200px; height:30px; font-size: 20px;}
+  </style>
+
+  <script>
+  $(document).ready(function() {
+    makeForm("my_form");
+  });
+  </script>
+</head>
+<body>
+	<div id="form-container">
+  <form id="my_form" method="POST" action="/">
+	  <div id="first" class="form-box">
+		  <label>First Name:</label><input type="text"><br />
+		  <label>Last Name:</label><input type="text"><br />
+	  </div>
+	  <div class="form-box">
+		  <label>Street:</label><input type="text"><br />
+		  <label>City:</label><input type="text"><br />
+		  <label>State:</label><input type="text"><br />
+		  <label>Zip:</label><input type="text"><br />
+	  </div>
+	  <div id="last" class="form-box">
+		  <label>Phone:</label><input type="text"><br />
+		  <label>E-Mail:</label><input type="text"><br />
+	  </div>
+	  
+		<div id="form-bottom">
+		  <input id="form-next" type="submit" value="Next">
+		  <input id="form-prev" type="submit" value="Prev">
+		</div>
+
+	</div>
+	
+</body>
+</html>
